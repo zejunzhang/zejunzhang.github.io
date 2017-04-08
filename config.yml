@@ -1,0 +1,29 @@
+site:
+    title: "张泽军博客"
+    subtitle: "前端技术学习"
+    limit: 10
+    theme: theme
+    lang: zh
+    url: "https://zhengwei1949.github.io/"
+    comment: zhengwei
+    logo: "-/images/avatar.png"
+    # link: "{category}/{year}/{month}/{day}/{title}.html"
+    # root: "/blog"
+
+authors:
+    me:
+        name: "郑伟"
+        intro: "so you want to be a frontend developer"
+        avatar: "-/images/avatar.png"
+
+build:
+    # output: "public"
+    port: 8000
+    # Copied files to public folder when build
+    copy:
+        - "source/images"
+    # Excuted command when use 'ink publish'
+    publish: |
+        git add . -A
+        git commit -m "update"
+        git push origin
