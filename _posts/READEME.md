@@ -1,3 +1,7 @@
+---
+layout: post
+title: 流行框架第二天
+---
 # 流行框架第2天
 
 ## git使用ssh方式上传代码与github
