@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+<meta name="robots" content="index,follow">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="张泽军博客">
+<meta name="twitter:description" content="前端技术学习">
+<meta name="twitter:image:src" content="https://zejunzhang.github.io/images/avatar.png">
+
+<meta property="og:url" content="https://zejunzhang.github.io">
+<meta property="og:title" content="张泽军博客">
+<meta property="og:description" content="前端技术学习">
+<meta property="og:site_name" content="张泽军博客">
+<meta property="og:image" content="https://zejunzhang.github.io/images/avatar.png">
+<meta property="og:type" content="website">
+<meta name="robots" content="noodp">
+
+<meta itemprop="name" content="张泽军博客">
+<meta itemprop="description" content="前端技术学习">
+<meta itemprop="image" content="https://zejunzhang.github.io/images/avatar.png">
+
+<link rel="canonical" href="https://zejunzhang.github.io">
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-itouch-icon" href="/favicon.png">
+<link rel="stylesheet" href="/bundle/index.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '';
+</script>
+
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
+        <meta name="keywords" content="angular基础知识,">
+        <meta name="description" content="扒网站教程">
+        <meta name="author" content="">
+        <title>扒网站教程</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+  <a class="index" href="/">
+    <img class="logo" src="/images/avatar.png" />
+    张泽军博客
+  </a>
+  <ul class="menu">
+      <li class="menu-item"><a href="/archive.html">归档</a></li>
+      <li class="menu-item"><a href="/tag.html">标签</a></li>
+      <li class="menu-item"><a href="/atom.xml">订阅</a></li>
+  </ul>
+</header>
+
+            <article class="main article">
+                <h1 class="title">扒网站教程</h1>
+                <section class="info">
+                    
+                    
+                    
+                    <span class="date" data-time="1467511200"><span class="from"></span></span>
+                    
+                    <span class="tags"><a class="tag" href="/tag/angular%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86/index.html">angular基础知识</a></span>
+                </section>
+                <article class="content"><!-- TOC -->
+
+<!-- /TOC -->
+
+<h2>前置知识</h2>
+
+<ul>
+<li>localStorage</li>
+
+<li><p>面向对象</p>
+
+<h2>day01</h2></li>
+
+<li><p>从一个手机端的app开始说起</p></li>
+
+<li><p>发现什么规律？和我们平时做的东西有什么不一样的地方？</p></li>
+
+<li><p>单页面应用、没有空白页面，跳来跳去比较复杂</p></li>
+
+<li><p>angular是一个用来做单页面应用的一个框架</p></li>
+
+<li><p>什么是框架，框架与库的区别 &ndash;&gt; 提示学习框架的时候，记住怎么用就行了，因为条条规则很多，是人为规定的</p></li>
+
+<li><p>单页面应用如何理解</p>
+
+<ul>
+<li>如何用原生的js实现单页面应用</li>
+<li>锚点的使用回顾</li>
+</ul></li>
+
+<li><p>单页面应用简单的示例</p></li>
+
+<li><p>入门</p>
+
+<ul>
+<li>原生的js实现值+1的功能</li>
+<li>angular实现值+1的功能</li>
+<li>angular表达式的简单使用</li>
+<li>angular表达式详细使用</li>
+<li>angular执行流程分析</li>
+<li>angular加法计算器案例</li>
+</ul></li>
+
+<li><p>功能太多了怎么办?按功能划分一下分开写，写完之后再组装一下，类似我们的笔记本 &ndash;&gt; 应用 = 主模块 + 一堆的其他的模块</p></li>
+
+<li><p>angular模块的创建</p>
+
+<ul>
+<li>直接渲染html字符串</li>
+<li>ng-bind-html渲染html字符串</li>
+</ul></li>
+
+<li><p>我们总不能一直在html中写业务逻辑,那应该放在哪里？ &ndash;&gt; 把angular控制器的创建</p></li>
+
+<li><p>自己创建模块和控制器实现加法计算器</p></li>
+
+<li><p>双向数据绑定与单向数据绑定</p></li>
+
+<li><p>从苹果生产手机分析mvc &ndash;&gt; 还是云里雾里?</p></li>
+
+<li><p>注册案例</p></li>
+
+<li><p>看完之后，分析一下代码，和我们之前写的有什么区别?能体会出来职责分离，便于维护就行了</p></li>
+
+<li><p>mvvm,mvc思想介绍</p></li>
+
+<li><p>$watch</p></li>
+</ul>
+
+<h2>day02</h2>
+
+<ul>
+<li>angular vs jquery</li>
+<li>angular开发流程总结</li>
+<li>模块划分的两种方式</li>
+<li>控制器创建的三种方式
+
+<ul>
+<li>传统的方式</li>
+<li>面向对象的方式</li>
+<li>安全的方式</li>
+</ul></li>
+<li>依赖注入的原理</li>
+<li>ng-bind解决闪烁的问题</li>
+<li>ng-cloak解决闪烁的问题</li>
+<li>ng-repeat指令
+
+<ul>
+<li>渲染数组数据到页面上</li>
+<li>数组数据重复问题及渲染key,value对象方法</li>
+<li>表达式实现隔行换色、$even,$odd,$last,$middle &ndash;&gt; 补充一下$last的应用</li>
+</ul></li>
+<li>ng-class (多个选择一个，多个选择多个)</li>
+<li>ng-hide,ng-show</li>
+<li>ng-if,ng-switch,ng-switch-when</li>
+<li>其他的一些常用的指令及事件指令</li>
+</ul>
+
+<h2>day03</h2>
+
+<ul>
+<li>演示一下点击换色的功能，想一想这个怎么实现？</li>
+<li>演示一下input[type=&ldquo;color&rdquo;]这个东西意味着什么？</li>
+<li>自定义指令简单介绍及template属性</li>
+<li>自定义指令-templateUrl</li>
+<li>自定义指令-restrict,replace</li>
+<li>自定义指令 - transclude</li>
+<li>自定义指令 - scope</li>
+
+<li><p>自定义指令 - link</p></li>
+
+<li><p>todoMVC案例
+。。。</p></li>
+</ul>
+
+<h2>前置知识</h2>
+
+<ul>
+<li>ajax,jsonp相关的知识的复习</li>
+</ul>
+</article>
+                <section class="author">
+                    
+                    <a class="name" href="/about..html"></a>
+                    <div class="intro"></div>
+                </section>
+                <section class="recommend">
+                    
+                    <section class="nav prev more">
+                        <div class="head">上篇文章</div>
+                        <a class="link" href="/express%e5%ae%9e%e7%8e%b0%e7%95%99%e8%a8%80%e6%9c%ac%e9%a1%b9%e7%9b%ae.html">express实现留言本项目</a>
+                    </section>
+                    
+                    
+                    <section class="nav next more">
+                        <div class="head">下篇文章</div>
+                        <a class="link" href="/angular_%e5%86%85%e7%bd%ae%e6%8c%87%e4%bb%a4%e6%b1%87%e6%80%bb.html">angular内置指令汇总</a>
+                    </section>
+                    
+                </section>
+                
+    <section id="disqus_thread"></section>
+    <script type="text/javascript">
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//zhangzejun.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        张泽军博客 ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear()-3);
+        </script>
+    </span>
+    <span class="publish">Powered by <a href="https://zejunzhang.github.io/" target="_blank">zhangzejun</a></span>
+</footer>
+
+        <script src="/bundle/index.js"></script>
+    </body>
+</html>
